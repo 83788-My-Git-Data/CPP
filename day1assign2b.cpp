@@ -66,7 +66,7 @@ int main(){
         switch(choice)
         {
             case 0:
-                printf("thanks for using our App!");
+                cout<<"thanks for using our App!";
                 break;
             case 1:
                  d1.acceptDateFromConsole();
