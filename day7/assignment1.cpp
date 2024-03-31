@@ -316,27 +316,3 @@ int main()
     return 0;
 }
 
-// int main()
-// {
-//     // Employee *eptr = new Employee();
-//     // Employee *eptr = new Manager();
-//     // Employee *eptr = new Salesman();
-//     Employee *eptr = new SalesManager();
-//     eptr->accept(); // Late Binding
-//     eptr->display();
-
-//     delete eptr;
-//     eptr = NULL;
-//     return 0;
-// }
-
-// int main1()
-// {
-//     // Employee obj;
-//     // Manager obj;
-//     // Salesman obj;
-//     SalesManager obj;
-//     obj.accept();
-//     obj.display();
-//     return 0;
-// }

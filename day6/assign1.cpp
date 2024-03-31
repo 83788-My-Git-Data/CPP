@@ -109,7 +109,9 @@ int main()
     // e.acceptData();
     // e.displayData();
 
-    Person *ptr = new Employee;
+    // Person *ptr = new Employee;
+        Employee *ptr = new Employee;
+
     ptr->acceptData();
     ptr->displayData();
     delete ptr;

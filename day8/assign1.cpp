@@ -32,7 +32,35 @@ public:
     ~accountexception()
     {
     }
+
 };
+
+// class InsufficientFundsException
+// {
+//     string message;
+
+// public:
+//     InsufficientFundsException()
+//     {
+//         this->message = "something wrong!";
+//     }
+//     InsufficientFundsException(string message)
+//     {
+//         this->message = message;
+//     }
+//     void printStackTrace()
+//     {
+//         cout << "Acount detail Exception :" << endl;
+//         cout << "Message :" << message << endl;
+//     }
+
+//     ~InsufficientFundsException()
+//     {
+//     }
+// };
+
+
+
 
 class Account
 {
@@ -149,7 +177,12 @@ int main()
                     cout<<"enter deposit amount :"<<endl;
                     cin>>personaldepositaccount;
                      userbal=arr[index-1]->getbalance();
-                     totalbal=userbal-personaldepositaccount;
+                     if(personaldepositaccount<=0)
+                     {
+                       throw accountexception("invalid amount");
+
+                     }
+                     totalbal=userbal+personaldepositaccount;
                     arr[index-1]->setbalance(totalbal);
                     break;
                 
@@ -157,7 +190,12 @@ int main()
                     cout<<"enter withdraw amount :"<<endl;
                     cin>>personalwithdrawaccount;
                      userbal=arr[index-1]->getbalance();
-                     totalbal2=userbal+personaldepositaccount;
+                     if(userbal<personalwithdrawaccount)
+                     {
+                           throw accountexception("sufficient balance is not available");
+
+                     }
+                     totalbal2=userbal-personaldepositaccount;
                     arr[index-1]->setbalance(totalbal2);
                     break;
                 case 3:
